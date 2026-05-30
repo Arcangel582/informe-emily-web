@@ -28,6 +28,9 @@ import {
   Video,
 } from "lucide-react";
 
+const publicAsset = (path) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 const site = {
   titulo: "Exploradores del mar",
   subtitulo: "Fomento del pensamiento científico mediante la estrategia de experimentación",
@@ -40,16 +43,16 @@ const site = {
   frase: "La educación es un acto de amor, por tanto, un acto de valor. No puede temer el debate, el análisis de la realidad; no puede huir de la discusión creativa, bajo pena de ser una farsa.",
 
   // Imágenes: escribe el nombre SIN extensión. El código probará .webp, .jpg, .jpeg, .png, .gif y .svg.
-  autoraFotoBase: "./assets/autora/emily-coronado",
-  logoNormalBase: "./assets/logos/logo-normal",
+  autoraFotoBase: publicAsset("assets/autora/emily-coronado"),
+  logoNormalBase: publicAsset("assets/logos/logo-normal"),
 
   // Documentos: aquí sí se conserva la extensión exacta.
-  informePdf: "./assets/documentos/informe-completo.pdf",
-  planeacionDocx: "./assets/documentos/planeacion-intervencion.docx",
-  evaluacionesExcel: "./assets/documentos/evaluaciones.xlsx",
-  tabulacionDiagnosticosPdf: "./assets/documentos/tabulacion-diagnosticos.pdf",
-  autoevaluacionPdf: "./assets/documentos/autoevaluacion.pdf",
-  diarioCientificoPdf: "./assets/documentos/diario-cientifico.pdf",
+  informePdf: publicAsset("assets/documentos/informe-completo.pdf"),
+  planeacionDocx: publicAsset("assets/documentos/planeacion-intervencion.docx"),
+  evaluacionesExcel: publicAsset("assets/documentos/evaluaciones.xlsx"),
+  tabulacionDiagnosticosPdf: publicAsset("assets/documentos/tabulacion-diagnosticos.pdf"),
+  autoevaluacionPdf: publicAsset("assets/documentos/autoevaluacion.pdf"),
+  diarioCientificoPdf: publicAsset("assets/documentos/diario-cientifico.pdf"),
 
   // Link opcional a carpeta de Drive con todos los videos. Si no se usa, dejar vacío.
   videosDriveFolderUrl: "",
@@ -57,6 +60,24 @@ const site = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Escuela%20Primaria%20Alberto%20Fern%C3%A1ndez%20Ruiloba%20Calle%20Nueva%20Andaluc%C3%ADa%20Ciudad%20Solidaridad%20Monterrey%20Nuevo%20Le%C3%B3n",
 };
+
+const decoraciones = [
+  {
+    imageBase: publicAsset("assets/decoraciones/cinnamoroll-marino-01"),
+    alt: "Cinnamoroll marino decorativo",
+    className: "absolute right-4 top-24 w-24 rotate-6 opacity-20 drop-shadow-xl md:right-10 md:w-32",
+  },
+  {
+    imageBase: publicAsset("assets/decoraciones/barco-pirata-01"),
+    alt: "Barco pirata decorativo",
+    className: "absolute left-3 top-[36rem] w-28 -rotate-6 opacity-18 drop-shadow-xl md:left-8 md:w-40",
+  },
+  {
+    imageBase: publicAsset("assets/decoraciones/cinnamoroll-marino-02"),
+    alt: "Cinnamoroll marinero decorativo",
+    className: "absolute bottom-16 right-6 w-24 rotate-3 opacity-18 drop-shadow-xl md:right-12 md:w-32",
+  },
+];
 
 const sections = [
   { id: "portada", label: "Portada", icon: Sparkles },
@@ -88,22 +109,22 @@ const contextoImagenes = [
   {
     title: "Fachada de la escuela",
     text: "Imagen exterior del plantel donde se desarrolló el servicio social.",
-    imageBase: "./assets/contexto/escuela-fachada",
+    imageBase: publicAsset("assets/contexto/escuela-fachada"),
   },
   {
     title: "Ubicación de la escuela",
     text: "Mapa, captura o referencia visual de la ubicación del plantel.",
-    imageBase: "./assets/contexto/ubicacion-escuela",
+    imageBase: publicAsset("assets/contexto/ubicacion-escuela"),
   },
   {
     title: "Aula del grupo 1",
     text: "Evidencia visual del espacio donde trabajó el grupo de 1.º C.",
-    imageBase: "./assets/contexto/aula-grupo-01",
+    imageBase: publicAsset("assets/contexto/aula-grupo-01"),
   },
   {
     title: "Aula del grupo 2",
     text: "Segunda imagen del aula, materiales, organización o ambiente de trabajo.",
-    imageBase: "./assets/contexto/aula-grupo-02",
+    imageBase: publicAsset("assets/contexto/aula-grupo-02"),
   },
 ];
 
@@ -208,17 +229,17 @@ const fases = [
 ];
 
 const sesiones = [
-  { n: "01", title: "Los detectives de materiales", foco: "Características físicas de los objetos", text: "A partir de un cuento sobre un pirata y un marinero, surge la pregunta de indagación. Los alumnos buscan objetos como palitos, fichas, taparroscas, pelotas y tornillos para clasificarlos en el diario científico.", imageBase: "./assets/evidencias/sesion-01-detectives-materiales-01" },
-  { n: "02", title: "¿Naufragio o flote?", foco: "Predicción y flotación", text: "Los estudiantes predicen si ciertos objetos flotan o se hunden y después contrastan sus ideas con la prueba en agua. Registran qué hicieron, qué pasó y qué descubrieron.", imageBase: "./assets/evidencias/sesion-02-naufragio-flote-01" },
-  { n: "03", title: "El huevo con superpoderes", foco: "Sal y densidad del agua", text: "Se compara el comportamiento de un huevo en agua simple, agua con sal y una tercera variable con azúcar para evitar generalizaciones y comprender el papel de la sal en la flotación.", imageBase: "./assets/evidencias/sesion-03-huevo-superpoderes-01" },
-  { n: "04", title: "El secreto del aceite", foco: "Líquidos que no se mezclan", text: "Se observa la reacción de gotas de leche con colorante en aceite para comprender que la composición de los líquidos influye en su comportamiento.", imageBase: "./assets/evidencias/sesion-04-secreto-aceite-01" },
-  { n: "05", title: "La torre de colores", foco: "Densidad y capas", text: "Con miel, jabón, agua y aceite, los alumnos observan cómo algunos líquidos se acomodan por capas sin mezclarse, descubriendo que no todos pesan igual.", imageBase: "./assets/evidencias/sesion-05-torre-colores-01" },
-  { n: "06", title: "La pecera embrujada", foco: "Burbujas, aire y gases", text: "La observación de burbujas y una reacción efervescente permite relacionar aire, gas y movimiento de los objetos.", imageBase: "./assets/evidencias/sesion-06-pecera-embrujada-01" },
-  { n: "07", title: "El misterio de la plastilina", foco: "La forma influye en la flotación", text: "Con plastilina del mismo material y peso, los alumnos comparan una esfera que se hunde con una forma de barco que puede flotar.", imageBase: "./assets/evidencias/sesion-07-misterio-plastilina-01" },
-  { n: "08", title: "¡Fiesta de palomitas bailarinas!", foco: "Gases y movimiento", text: "Semillas de maíz, bicarbonato y vinagre muestran cómo las burbujas hacen que algunos objetos suban y bajen dentro del líquido.", imageBase: "./assets/evidencias/sesion-08-palomitas-bailarinas-01" },
-  { n: "09", title: "El consejo de científicos del mar", foco: "Collage y explicación", text: "Los alumnos integran imágenes y frases sobre sal, aire, forma y materiales para explicar por qué los barcos pueden flotar.", imageBase: "./assets/evidencias/sesion-09-consejo-cientificos-01" },
-  { n: "10", title: "Del prototipo al barco", foco: "Diseño, prueba y ajuste", text: "Cada estudiante diseña un barco de aluminio, lo prueba en agua y realiza modificaciones según sus fallas de estabilidad o forma.", imageBase: "./assets/evidencias/sesion-10-prototipo-barco-01" },
-  { n: "11", title: "La reta", foco: "Barco final y reflexión", text: "Se prueba el prototipo final. Los alumnos explican si flotó, cuánto tiempo resistió y por qué algunos diseños se hundieron.", imageBase: "./assets/evidencias/sesion-11-la-reta-01" },
+  { n: "01", title: "Los detectives de materiales", foco: "Características físicas de los objetos", text: "A partir de un cuento sobre un pirata y un marinero, surge la pregunta de indagación. Los alumnos buscan objetos como palitos, fichas, taparroscas, pelotas y tornillos para clasificarlos en el diario científico.", imageBase: publicAsset("assets/evidencias/sesion-01-detectives-materiales-01") },
+  { n: "02", title: "¿Naufragio o flote?", foco: "Predicción y flotación", text: "Los estudiantes predicen si ciertos objetos flotan o se hunden y después contrastan sus ideas con la prueba en agua. Registran qué hicieron, qué pasó y qué descubrieron.", imageBase: publicAsset("assets/evidencias/sesion-02-naufragio-flote-01") },
+  { n: "03", title: "El huevo con superpoderes", foco: "Sal y densidad del agua", text: "Se compara el comportamiento de un huevo en agua simple, agua con sal y una tercera variable con azúcar para evitar generalizaciones y comprender el papel de la sal en la flotación.", imageBase: publicAsset("assets/evidencias/sesion-03-huevo-superpoderes-01") },
+  { n: "04", title: "El secreto del aceite", foco: "Líquidos que no se mezclan", text: "Se observa la reacción de gotas de leche con colorante en aceite para comprender que la composición de los líquidos influye en su comportamiento.", imageBase: publicAsset("assets/evidencias/sesion-04-secreto-aceite-01") },
+  { n: "05", title: "La torre de colores", foco: "Densidad y capas", text: "Con miel, jabón, agua y aceite, los alumnos observan cómo algunos líquidos se acomodan por capas sin mezclarse, descubriendo que no todos pesan igual.", imageBase: publicAsset("assets/evidencias/sesion-05-torre-colores-01") },
+  { n: "06", title: "La pecera embrujada", foco: "Burbujas, aire y gases", text: "La observación de burbujas y una reacción efervescente permite relacionar aire, gas y movimiento de los objetos.", imageBase: publicAsset("assets/evidencias/sesion-06-pecera-embrujada-01") },
+  { n: "07", title: "El misterio de la plastilina", foco: "La forma influye en la flotación", text: "Con plastilina del mismo material y peso, los alumnos comparan una esfera que se hunde con una forma de barco que puede flotar.", imageBase: publicAsset("assets/evidencias/sesion-07-misterio-plastilina-01") },
+  { n: "08", title: "¡Fiesta de palomitas bailarinas!", foco: "Gases y movimiento", text: "Semillas de maíz, bicarbonato y vinagre muestran cómo las burbujas hacen que algunos objetos suban y bajen dentro del líquido.", imageBase: publicAsset("assets/evidencias/sesion-08-palomitas-bailarinas-01") },
+  { n: "09", title: "El consejo de científicos del mar", foco: "Collage y explicación", text: "Los alumnos integran imágenes y frases sobre sal, aire, forma y materiales para explicar por qué los barcos pueden flotar.", imageBase: publicAsset("assets/evidencias/sesion-09-consejo-cientificos-01") },
+  { n: "10", title: "Del prototipo al barco", foco: "Diseño, prueba y ajuste", text: "Cada estudiante diseña un barco de aluminio, lo prueba en agua y realiza modificaciones según sus fallas de estabilidad o forma.", imageBase: publicAsset("assets/evidencias/sesion-10-prototipo-barco-01") },
+  { n: "11", title: "La reta", foco: "Barco final y reflexión", text: "Se prueba el prototipo final. Los alumnos explican si flotó, cuánto tiempo resistió y por qué algunos diseños se hundieron.", imageBase: publicAsset("assets/evidencias/sesion-11-la-reta-01") },
 ];
 
 const videosDrive = [
@@ -391,6 +412,7 @@ function drivePreviewUrl(url) {
 
 export default function InformePracticasPreview() {
   const [query, setQuery] = useState("");
+  const [modalImage, setModalImage] = useState(null);
 
   const filteredSections = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -421,6 +443,18 @@ export default function InformePracticasPreview() {
         <div className="absolute right-[-9rem] top-[8rem] h-[28rem] w-[28rem] rounded-full bg-[#ff85b7]/24 blur-3xl" />
         <div className="absolute left-[34%] top-[19rem] h-[25rem] w-[25rem] rounded-full bg-[#fff2a8]/28 blur-3xl" />
         <div className="absolute right-[8%] bottom-[6rem] h-[32rem] w-[32rem] rounded-full bg-[#7adfe8]/30 blur-3xl" />
+      </div>
+
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        {decoraciones.map((item) => (
+          <ImageWithFallback
+            key={item.alt}
+            base={item.imageBase}
+            alt={item.alt}
+            className={item.className}
+            placeholder=""
+          />
+        ))}
       </div>
 
       <header className="sticky top-0 z-40 border-b border-white/35 bg-[#fff2df]/74 shadow-md shadow-pink-200/15 backdrop-blur-xl">
@@ -469,6 +503,9 @@ export default function InformePracticasPreview() {
                 alt="Logo de la Escuela Normal Miguel F. Martínez"
                 className="h-full w-full object-contain"
                 placeholder="Logo"
+                onOpen={(src) =>
+                  setModalImage({ src, alt: "Logo de la Escuela Normal Miguel F. Martínez" })
+                }
               />
             </div>
             <p className="inline-flex items-center gap-2 rounded-full bg-[#fff4dc]/72 px-4 py-2 text-sm font-black text-[#77435b] shadow-sm ring-1 ring-white/70">
@@ -517,7 +554,12 @@ export default function InformePracticasPreview() {
                   <Sun className="h-9 w-9 text-[#c78b28]" />
                 </div>
 
-                <VisualSlot imageBase={site.autoraFotoBase} label="foto de perfil" className="mx-auto h-72 w-56 rounded-[2rem]" />
+                <VisualSlot
+                  imageBase={site.autoraFotoBase}
+                  label="foto de perfil"
+                  className="mx-auto h-72 w-56 rounded-[2rem]"
+                  onOpen={setModalImage}
+                />
 
                 <div className="rounded-3xl bg-[#fff5df]/76 p-4 shadow-lg shadow-yellow-100/10 ring-1 ring-white/65 backdrop-blur">
                   <p className="text-sm font-black text-slate-900">Paulo Freire</p>
@@ -546,7 +588,7 @@ export default function InformePracticasPreview() {
             <h3 className="card-title flex items-center gap-2"><MapPin className="h-5 w-5 text-[#e85f9e]" /> Ubicación y comunidad</h3>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               {contextoImagenes.map((item) => (
-                <ImageCard key={item.title} item={item} />
+                <ImageCard key={item.title} item={item} onOpen={setModalImage} />
               ))}
             </div>
             <p className="mt-4 text-sm leading-7 text-slate-700">
@@ -628,7 +670,7 @@ export default function InformePracticasPreview() {
 
         <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {sesiones.map((s) => (
-            <SessionCard key={s.n} session={s} />
+            <SessionCard key={s.n} session={s} onOpen={setModalImage} />
           ))}
         </div>
       </section>
@@ -658,8 +700,8 @@ export default function InformePracticasPreview() {
           </GlassCard>
         )}
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {videosDrive.map((video) => (
-            <DriveVideoCard key={video.n} video={video} />
+          {videosDrive.map((video, index) => (
+            <DriveVideoCard key={`${video.title}-${index}`} video={video} />
           ))}
         </div>
       </section>
@@ -761,6 +803,8 @@ export default function InformePracticasPreview() {
           </div>
         </GlassCard>
       </section>
+
+      <ImageModal image={modalImage} onClose={() => setModalImage(null)} />
     </main>
   );
 }
@@ -817,7 +861,7 @@ function imageCandidates(baseOrSrc) {
   return candidates;
 }
 
-function ImageWithFallback({ base, alt, className = "", placeholder = "Imagen" }) {
+function ImageWithFallback({ base, alt, className = "", placeholder = "Imagen", onOpen }) {
   const candidates = imageCandidates(base);
   const [index, setIndex] = useState(0);
   const current = candidates[index];
@@ -830,21 +874,35 @@ function ImageWithFallback({ base, alt, className = "", placeholder = "Imagen" }
     );
   }
 
-  return <img src={current} alt={alt} className={className} onError={() => setIndex((prev) => prev + 1)} />;
+  return (
+    <img
+      src={current}
+      alt={alt}
+      className={`${className} ${onOpen ? "cursor-zoom-in" : ""}`}
+      onClick={() => onOpen?.(current)}
+      onError={() => setIndex((prev) => prev + 1)}
+    />
+  );
 }
 
-function VisualSlot({ imageBase, label, className = "" }) {
+function VisualSlot({ imageBase, label, className = "", onOpen }) {
   return (
     <div className={`${className} overflow-hidden border border-white/65 bg-white/25 text-center shadow-xl shadow-pink-300/15 backdrop-blur-md`}>
-      <ImageWithFallback base={imageBase} alt={label} className="h-full w-full object-cover" placeholder={label} />
+      <ImageWithFallback
+        base={imageBase}
+        alt={label}
+        className="h-full w-full object-cover"
+        placeholder={label}
+        onOpen={onOpen ? (src) => onOpen({ src, alt: label }) : undefined}
+      />
     </div>
   );
 }
 
-function ImageCard({ item }) {
+function ImageCard({ item, onOpen }) {
   return (
     <div className="rounded-3xl bg-white/34 p-3 ring-1 ring-white/65">
-      <VisualSlot imageBase={item.imageBase} label={item.title} className="aspect-video rounded-2xl" />
+      <VisualSlot imageBase={item.imageBase} label={item.title} className="aspect-video rounded-2xl" onOpen={onOpen} />
       <h4 className="mt-3 text-sm font-black text-slate-900">{item.title}</h4>
       <p className="mt-1 text-xs leading-5 text-slate-700">{item.text}</p>
     </div>
@@ -872,7 +930,7 @@ function SimpleBars({ data, max }) {
   );
 }
 
-function SessionCard({ session }) {
+function SessionCard({ session, onOpen }) {
   return (
     <GlassCard>
       <div className="flex items-start justify-between gap-3">
@@ -885,7 +943,7 @@ function SessionCard({ session }) {
       <p className="mt-2 text-sm font-bold text-[#118c9b]">{session.foco}</p>
       <p className="mt-3 text-sm leading-6 text-slate-700">{session.text}</p>
       <div className="mt-4">
-        <VisualSlot imageBase={session.imageBase} label={`Evidencia de ${session.title}`} className="aspect-video rounded-3xl" />
+        <VisualSlot imageBase={session.imageBase} label={`Evidencia de ${session.title}`} className="aspect-video rounded-3xl" onOpen={onOpen} />
       </div>
     </GlassCard>
   );
@@ -919,7 +977,7 @@ function DriveVideoCard({ video }) {
           </div>
         )}
       </div>
-      <p className="mt-4 text-xs font-black uppercase tracking-widest text-[#d94f8b]">Sesión {video.n}</p>
+      <p className="mt-4 text-xs font-black uppercase tracking-widest text-[#d94f8b]">{video.session}</p>
       <h3 className="mt-1 text-xl font-black">{video.title}</h3>
       <p className="mt-2 text-sm leading-6 text-slate-700">{video.description}</p>
     </GlassCard>
@@ -940,6 +998,36 @@ function DocumentCard({ doc }) {
         Abrir / descargar <Download className="h-4 w-4" />
       </a>
     </GlassCard>
+  );
+}
+
+function ImageModal({ image, onClose }) {
+  if (!image) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div className="relative max-h-[95vh] max-w-[95vw]" onClick={(e) => e.stopPropagation()}>
+        <button
+          onClick={onClose}
+          className="absolute right-2 top-2 z-10 rounded-full bg-white/90 px-3 py-1 text-sm font-black text-slate-900 shadow hover:bg-white"
+        >
+          ✕
+        </button>
+        <img
+          src={image.src}
+          alt={image.alt || "Vista ampliada"}
+          className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
+        />
+        {image.alt && (
+          <p className="mt-3 rounded-2xl bg-white/90 px-4 py-2 text-center text-sm font-bold text-slate-800 shadow">
+            {image.alt}
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
 
