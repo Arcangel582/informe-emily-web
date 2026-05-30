@@ -222,17 +222,66 @@ const sesiones = [
 ];
 
 const videosDrive = [
-  { n: "01", title: "Video sesión 1: Los detectives de materiales", description: "Evidencia en video de la exploración inicial de materiales.", url: "" },
-  { n: "02", title: "Video sesión 2: ¿Naufragio o flote?", description: "Predicción y contraste de objetos que flotan o se hunden.", url: "" },
-  { n: "03", title: "Video sesión 3: El huevo con superpoderes", description: "Experimento con agua, sal y densidad.", url: "" },
-  { n: "04", title: "Video sesión 4: El secreto del aceite", description: "Observación de líquidos que no se mezclan.", url: "" },
-  { n: "05", title: "Video sesión 5: La torre de colores", description: "Capas de líquidos y comparación de densidades.", url: "" },
-  { n: "06", title: "Video sesión 6: La pecera embrujada", description: "Burbujas, aire, gas y movimiento dentro del líquido.", url: "" },
-  { n: "07", title: "Video sesión 7: El misterio de la plastilina", description: "Comparación entre forma de esfera y forma de barco.", url: "" },
-  { n: "08", title: "Video sesión 8: Palomitas bailarinas", description: "Reacción con bicarbonato, vinagre y movimiento de semillas.", url: "" },
-  { n: "09", title: "Video sesión 9: Consejo de científicos del mar", description: "Integración de ideas, collage y explicación grupal.", url: "" },
-  { n: "10", title: "Video sesión 10: Del prototipo al barco", description: "Diseño, prueba y ajustes del prototipo.", url: "" },
-  { n: "11", title: "Video sesión 11: La reta", description: "Prueba final de barcos y reflexión de cierre.", url: "" },
+  {
+    session: "Sesión 4",
+    title: "Sesión 4: El secreto del aceite",
+    description: "Evidencia en video del experimento sobre líquidos que no se mezclan.",
+    url: "https://drive.google.com/file/d/1lYM9QitF1ntbyhuRzo7-FxJzxuy7u6sH/preview",
+  },
+  {
+    session: "Sesión 5",
+    title: "Sesión 5: La torre de colores",
+    description: "Evidencia en video del experimento sobre densidad y capas de líquidos.",
+    url: "https://drive.google.com/file/d/1jIWqdMucxD90Q1mRMqGZ_bux75uuqPtL/preview",
+  },
+  {
+    session: "Sesión 6",
+    title: "Sesión 6: La pecera embrujada · Video 1",
+    description: "Evidencia en video del experimento sobre burbujas, aire y gases.",
+    url: "https://drive.google.com/file/d/1TZqIwg_TjwtTF3BKG_DvdWhgYr3OxBHu/preview",
+  },
+  {
+    session: "Sesión 6",
+    title: "Sesión 6: La pecera embrujada · Video 2",
+    description: "Segunda evidencia en video del experimento sobre burbujas, aire y gases.",
+    url: "https://drive.google.com/file/d/1rX5J0AV9otsmifPcy70KL1-M7KSxJWgY/preview",
+  },
+  {
+    session: "Sesión 6",
+    title: "Sesión 6: La pecera embrujada · Video 3",
+    description: "Tercera evidencia en video del experimento sobre burbujas, aire y gases.",
+    url: "https://drive.google.com/file/d/1ridlj9lxwvUEcfGlH52s3mnEz6uuciSc/preview",
+  },
+  {
+    session: "Sesión 6",
+    title: "Sesión 6: La pecera embrujada · Video 4",
+    description: "Cuarta evidencia en video del experimento sobre burbujas, aire y gases.",
+    url: "https://drive.google.com/file/d/1scdTpXTXlBKRbs9GMO5J99GQz365gDbY/preview",
+  },
+  {
+    session: "Sesión 7",
+    title: "Sesión 7: El misterio de la plastilina",
+    description: "Evidencia en video del experimento sobre forma y flotación.",
+    url: "https://drive.google.com/file/d/1nj7c9ZuuBl3Q6cDYYkso3roVOY3FMimU/preview",
+  },
+  {
+    session: "Sesión 8",
+    title: "Sesión 8: Fiesta de palomitas bailarinas",
+    description: "Evidencia en video del experimento sobre gases y movimiento.",
+    url: "https://drive.google.com/file/d/16poGz0zdp1XZDfWeZ8IBelq_Ca1vrrHg/preview",
+  },
+  {
+    session: "Sesión 10",
+    title: "Sesión 10: Del prototipo al barco",
+    description: "Evidencia en video del diseño, prueba y ajuste de prototipos.",
+    url: "https://drive.google.com/file/d/1KvxOI31K1j189xruujHe5pngZR-xfjmr/preview",
+  },
+  {
+    session: "Sesión 11",
+    title: "Sesión 11: La reta",
+    description: "Evidencia en video de la prueba final de los barcos.",
+    url: "https://drive.google.com/file/d/1YqbDo2y2KOFGRLiM4CgsV_c8zTwalNCD/preview",
+  },
 ];
 
 const evaluaciones = [
