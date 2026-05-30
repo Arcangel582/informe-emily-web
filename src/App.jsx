@@ -676,11 +676,11 @@ export default function InformePracticasPreview() {
       </section>
 
       <section id="evidencias" className="section-wrap">
-        <SectionTitle icon={Images} title="Evidencias visuales" subtitle="Galería preparada para integrar fotografías de sesiones, videos, productos del diario científico y prototipos." />
+        <SectionTitle icon={Images} title="Evidencias visuales" subtitle="Los prototipos, barcos y productos pueden ser vistos en los collage de la seccion de intervención." />
         <div className="grid gap-5 md:grid-cols-3">
-          <EvidenceCard icon={Camera} title="Fotografías de sesiones" text="Colocar imágenes por sesión: materiales, experimentos, trabajo en equipo, diarios científicos, scrapbooking y prototipos." />
-          <EvidenceCard icon={Ship} title="Prototipos de barcos" text="Galería para mostrar el borrador, ajustes y barco final de los estudiantes durante las sesiones 10 y 11." />
-          <EvidenceCard icon={NotebookText} title="Diario científico" text="Espacio para evidencias del registro: predicción, materiales, qué pasó y qué descubrieron." />
+          <EvidenceCard icon={Camera} title="Fotografías de sesiones" text="Dentro de los collage imágenes por sesión: materiales, experimentos, trabajo en equipo, diarios científicos, scrapbooking y prototipos." />
+          <EvidenceCard icon={Ship} title="Prototipos de barcos" text="Dentro de los collage puedes encontrar el barco final de los estudiantes durante las sesiones 10 y 11." />
+          <EvidenceCard icon={NotebookText} title="Diario científico" text="Dentro de la sección de evaluación e instrumentos puedes encontrar el archivo que usaron los alumnos para anotar la predicción, materiales, qué pasó y qué descubrieron." />
         </div>
       </section>
 
