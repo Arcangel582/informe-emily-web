@@ -33,7 +33,7 @@ const site = {
   institucion: "Escuela Normal Miguel F. Martínez · Centenaria y Benemérita",
   lugarFecha: "Monterrey, N.L., México · Julio 2026",
   ciclo: "2025 – 2026",
-  frase: "La educación no cambia el mundo, cambia a las personas que van a cambiar el mundo.",
+  frase: "La educación es un acto de amor, por tanto, un acto de valor. No puede temer el debate, el análisis de la realidad; no puede huir de la discusión creativa, bajo pena de ser una farsa.",
   autoraFoto: "./assets/autora/emily-coronado.jpg",
   informePdf: "/assets/documentos/informe-completo.pdf",
   planeacionPdf: "./assets/documentos/planeacion-evaluacion.pdf",
